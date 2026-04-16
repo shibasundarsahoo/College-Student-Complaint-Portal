@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="admin.css">
+<title>Admin Panel</title>
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a class="active" onclick="showSection('complaintsSection')">All Complaints</a>
+    <a onclick="showSection('settingsSection')">⚙ Settings</a>
+    <a class="logout" onclick="logout()">Logout</a>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <!-- Complaints Section -->
+    <div id="complaintsSection">
+        <h2>Complaint Management - GCE Keonjhar</h2>
+
+        <!-- Cards -->
+        <div class="cards">
+            <div class="card">Total: <span id="total">0</span></div>
+            <div class="card">Pending: <span id="pending">0</span></div>
+            <div class="card">Resolved: <span id="resolved">0</span></div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Roll No</th>
+                        <th>Category</th>
+                        <th>Details</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settingsSection" style="display:none;">
+        <h2>Settings</h2>
+
+        <div style="margin-top:15px;">
+            <label>Admin Name:</label><br>
+            <input type="text" id="adminName" style="padding:8px; width:250px;">
+        </div>
+
+        <div style="margin-top:15px;">
+            <label>Theme:</label><br>
+            <select id="theme" style="padding:8px;">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <button onclick="saveSettings()" style="margin-top:20px;">
+            Save Settings
+        </button>
+    </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

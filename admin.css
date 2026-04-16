@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#e9ecef;
+}
+
+/* Sidebar */
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar a{
+    display:block;
+    padding:10px;
+    margin:10px 0;
+    text-decoration:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.sidebar a.active{
+    background:#3b82f6;
+}
+
+.logout{
+    background:#ef4444;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* Cards */
+.cards{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.card{
+    flex:1;
+    background:#ffffff;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Table */
+.table-container{
+    width:100%;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    background:#ffffff;
+    border-radius:10px;
+    border-collapse:collapse;
+    overflow:hidden;
+}
+
+thead{
+    background:#f1f3f5;
+}
+
+th,td{
+    padding:14px 16px;
+    text-align:left;
+}
+
+tr{
+    border-bottom:1px solid #ddd;
+}
+
+tr:last-child{
+    border-bottom:none;
+}
+
+/* Status */
+.status{
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.status.resolved{
+    background:#c8f7c5;
+    color:#2e7d32;
+}
+
+.status.pending{
+    background:orange;
+    color:white;
+}
+
+/* Buttons */
+button{
+    padding:6px 10px;
+    border:none;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.done-btn{
+    background:#22c55e;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
